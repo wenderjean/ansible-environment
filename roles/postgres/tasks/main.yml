@@ -1,0 +1,17 @@
+---
+- name: install postgres
+  apt: name=postgresql state=latest update_cache=yes install_recommends=yes
+  tags:
+  - postgres
+  - install
+- include: role.yml
+  sudo: yes
+  sudo_user: postgres
+  tags:
+  - postgres
+- include: database.yml
+  sudo: yes
+  sudo_user: postgres
+  tags:
+  - postgres
+

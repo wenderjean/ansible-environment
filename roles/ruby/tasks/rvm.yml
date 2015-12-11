@@ -1,0 +1,13 @@
+---
+- name: add gpg key
+  shell: gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  tags:
+  - gpg
+- name: install
+  shell: curl -sSL https://get.rvm.io | bash -s stable
+  tags:
+  - install
+- name: export .bashrc
+  lineinfile: dest="/home/{{ deploy_user }}/.bashrc" line='source {{ rvm_dir }}/scripts/rvm' insertafter='EOF' state=present
+  tags:
+  - bashrc

@@ -1,0 +1,7 @@
+---
+- name: copy .gemrc
+  copy: src=.gemrc dest=/home/{{ deploy_user }}/.gemrc force=yes owner={{ deploy_user }} mode=0755
+  tags:
+  - .gemrc
+- name: install bundler
+  command: /bin/bash -lc 'gem install bundle --no-ri --no-rdoc'

@@ -1,0 +1,7 @@
+---
+- include: dirs.yml
+  tags:
+  - application
+- include: user.yml
+  tags:
+  - application

@@ -1,0 +1,9 @@
+---
+- name: installing ruby {{ ruby_version }}
+  command: /bin/bash -lc 'rvm install {{ ruby_version }}'
+  tags:
+  - install
+- name: installing ruby {{ ruby_version }}
+  command: /bin/bash -lc 'rvm use {{ ruby_version }}'
+  tags:
+  - use

@@ -1,0 +1,23 @@
+---
+- name: install dependencies
+  apt: pkg={{ item }} state=latest update_cache=yes install_recommends=no
+  with_items:
+  - git-core
+  - nodejs
+  - curl
+  - zlib1g-dev
+  - build-essential
+  - libssl-dev
+  - libreadline-dev
+  - libyaml-dev
+  - libxml2-dev
+  - libxslt1-dev
+  - libcurl4-openssl-dev
+  - python-software-properties
+  - python-psycopg2
+  - libffi-dev
+  - ruby-dev
+  - libgmp-dev
+  - libpq-dev
+  tags:
+  - dependencies

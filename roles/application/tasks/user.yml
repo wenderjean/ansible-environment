@@ -1,0 +1,5 @@
+---
+- name: adding deploy user
+  user: name={{ deploy_user }} password={{ deploy_user_passwd }} shell=/bin/bash group={{ deploy_group }}
+  tags:
+  - user
