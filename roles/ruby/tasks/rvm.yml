@@ -8,6 +8,6 @@
   tags:
   - install
 - name: export .bashrc
-  lineinfile: dest="/home/{{ deploy_user }}/.bashrc" line='source {{ rvm_dir }}/scripts/rvm' insertafter='EOF' state=present
+  lineinfile: dest="/home/{{ deploy_user }}/.bashrc" line='source {{ rvm_path }}/scripts/rvm' insertafter='EOF' state=present
   tags:
   - bashrc

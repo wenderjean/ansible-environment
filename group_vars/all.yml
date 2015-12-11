@@ -1,12 +1,4 @@
 ---
-database: test
 deploy_group: sudo
 deploy_user: deploy
-deploy_user_passwd: "$1$@@$LElAzJ8cpHXQ0eIuUzm.R/"
-
-rvm_dir: /usr/local/rvm
-
-ruby_version: 2.2.2
-pg_version: 9.3
-
-app_secret_key: "d2b96b06eeba269c3a6b0bf0ce80ceb85f0fe67bdf8084a7dda8cbab83329e7a483d4b3d88e8c2121b82455feb91e0c22e8d9824688bd19e25acb88ceeb45f8d"
+deploy_user_passwd: "$6FMi11BJFsAc"
