@@ -1,15 +1,15 @@
 ---
 - include: rvm.yml
-  remote_user: "{{ deploy_user }}"
+  become_user: "{{ deploy_user }}"
   tags:
   - rvm
 - include: ruby.yml
-  remote_user: "{{ deploy_user }}"
+  become_user: "{{ deploy_user }}"
   tags:
   - ruby
   - core
 - include: gems.yml
-  remote_user: "{{ deploy_user }}"
+  become_user: "{{ deploy_user }}"
   tags:
   - gem
 
